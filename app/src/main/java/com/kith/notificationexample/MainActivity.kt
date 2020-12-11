@@ -49,15 +49,13 @@ class MainActivity : AppCompatActivity() {
                 notificationManager.createNotificationChannel(notificationChannel)
 
                 builder = Notification.Builder(this, channelId)
-                    .setContentTitle("Notification Example")
-                    .setContentText("Test Notification")
+                    .setContent(contentView)
                     .setSmallIcon(R.drawable.ic_android_black_24dp)
                     .setLargeIcon(BitmapFactory.decodeResource(this.resources, R.drawable.ic_android_black_24dp))
                     .setContentIntent(pendingIntent)
             } else {
                 builder = Notification.Builder(this)
-                    .setContentTitle("Notification Example")
-                    .setContentText("Test Notification")
+                    .setContent(contentView)
                     .setSmallIcon(R.drawable.ic_android_black_24dp)
                     .setLargeIcon(BitmapFactory.decodeResource(this.resources, R.drawable.ic_android_black_24dp))
                     .setContentIntent(pendingIntent)
